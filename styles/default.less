@@ -32,6 +32,7 @@
     // The cursor
     border-left: 2px solid @base00;
     Background:#FFA87D;
+    z-index: 999;
   }
   .CodeMirror-matchingbracket,
   .CodeMirror-matchingtag {
@@ -95,7 +96,17 @@
       color: @baseList;
     }
 
-    .cm-keyword,
+    .cm-keyword {
+      //color: @baseList;
+      color: inherit;
+    }
+    .cm-formatting-list-ul {
+      color: @baseList;
+    }
+    .cm-formatting-list-ul.cm-keyword {
+      padding-left: 0.2em !important;
+      text-indent: -0.2em !important;
+    }
     .cm-formatting-list.cm-variable-2 {
       color: @baseList;
     }
@@ -261,6 +272,14 @@
     //text-indent: -2.05em !important;
     text-indent: -2.4em !important;
   }
+
+  .cm-formatting-code-block, .gfm-codeblock-begin, .gfm-codeblock-end  {
+    //text-align:right;
+    //color: #DFDFDF;
+    color: @base0A;
+    //color: gray;
+    /* background-color:#FBFBFB !important; */
+  }
 }
 
 .status-additional {
@@ -279,9 +298,42 @@
 
 .mde-preview * {
   line-height:180%;
+
+  h2 {
+    color: @base0A;
+    border-bottom: 1px dashed #D0DAE6 !important;
+    max-width:80%;
+    font-weight: 500 !important;
+  }
+  h3 {
+    color: @base0A;
+    font-weight: 500 !important;
+    font-size: 1.3em !important;
+  }
+
+  strong {
+    color:#C00000;
+  }
+
+  code {
+  }
 }
 
 .editor-title-input.ui.input input[type=text] {
-  height:1em;
+  height:2em;
   font-size:18pt;
+  //color: rgba(0, 0, 0, 0.84);
+  color:#5181AC;
+  font-weight:bold;
+  //background-color: #FBFBFB;
+  //font-family: -apple-system,BlinkMacSystemFont;
 }
+
+.editor-header-layout {
+  display: none !important;
+}
+
+.editor-meta-layout, .editor-meta-layout * {
+  //background-color: #FBFBFB !important;
+}
+
