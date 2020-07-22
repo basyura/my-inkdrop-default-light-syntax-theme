@@ -6,6 +6,13 @@
     // Background color of main window
     background-color: #FBFBFB;
     color: @base02;
+  //-webkit-font-smoothing: subpixel-antialiased !important;
+  //text-shadow: 0px 0px 0px !important;
+  //
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.03px !important;
+  text-shadow: transparent 0px 0px 0px, rgba(0,0,0,0.26) 0px 0px 0px !important;
+
   }
   .CodeMirror-scroll {
     // Color of otherwise un-styled text
@@ -81,10 +88,22 @@
       color: @baseList;
     }
 
-    .cm-keyword,
+    .cm-keyword {
+      //color: @baseList;
+      color: inherit;
+    }
     .cm-formatting-list.cm-variable-2 {
       color: @baseList;
     }
+    .cm-formatting-list-ul {
+      color: @baseList;
+    }
+    .cm-formatting-list-ul.cm-keyword {
+      padding-left: 0.3em !important;
+      text-indent: -0.3em !important;
+    }
+
+
 
     .cm-url,
     .cm-string,
@@ -92,15 +111,28 @@
     .cm-hr {
       color: @base09;
     }
+    .cm-string {
+      color:darkblue;
+    }
+    .cm-url {
+      -webkit-text-stroke-width: 0px !important;
+      text-shadow: none !important;
+      color: #004080;
+    }
     .cm-number,
     .cm-attribute,
     .cm-plus {
       color: @base0A;
     }
-    .cm-def,
-    .cm-property {
-      color: @base0C;
+    .cm-def {
+      //color: @base0C;
+      color: brown;
     }
+    .cm-property {
+      //color: @base0C;
+      color: darkmagenta;
+    }
+
     .cm-variable {
       color: @base0A;
     }
@@ -164,8 +196,16 @@
     }
 
     .gfm-codeblock {
-      font-size: 90%;
+      //font-size: 90%;
       //line-height: 130%;
+    }
+    .gfm-codeblock-bg {
+    }
+    .gfm-codeblock {
+      //-webkit-text-stroke-width: 0px !important;
+      //text-shadow: none !important;
+      font-family:"UD Digi Kyokasho N-R";
+      font-size:11pt;
     }
 
     .cm-table-sep, .table-row.table-row-1 {
@@ -228,5 +268,89 @@
   img.inline-widget {
     max-height: 300px;
   }
+
+  .list-line-1 {
+    padding-left: 1.6em !important;
+    text-indent: -1.05em !important;
+  }
+  .list-line-2 {
+    padding-left: 2.7em !important;
+    text-indent: -2.05em !important;
+  }
 }
 
+.sidetoc-pane li {
+  font-size:15px;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.03px !important;
+  text-shadow: transparent 0px 0px 0px, rgba(0,0,0,0.26) 0px 0px 0px !important;
+}
+
+.mde-preview {
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.03px !important;
+  text-shadow: transparent 0px 0px 0px, rgba(0,0,0,0.26) 0px 0px 0px !important;
+  font-family: "メイリオ, UD Digi Kyokasho N-R" !important;
+}
+
+.note-list-bar-item, sidebar-menu-item {
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.03px !important;
+  text-shadow: transparent 0px 0px 0px, rgba(0,0,0,0.26) 0px 0px 0px !important;
+  //font-family: "UD Digi Kyokasho N-R" !important;
+}
+
+.status-additional {
+  color:white !important;
+}
+//.status-additional {
+  //color: rgba(255, 255, 255, 0.8) !important;
+//}
+
+.sidebar-menu-item.active {
+  background: rgba(255, 0, 0, 0.4);
+  color: white !important;
+}
+
+
+.mde-preview  {
+  * {
+    line-height:200%;
+    font-family:"UD Digi Kyokasho N-R";
+    color:black;
+  }
+  pre {
+    font-size:100% !important;
+  }
+  strong {
+    color:#C00000;
+  }
+  h2 {
+      color: @base0A;
+      font-weight:normal;
+      border-bottom: 1px dashed #D0DAE6;
+      max-width:80%;
+      font-size:1.5em !important;
+  }
+  h3 {
+      color: @base0A;
+      font-weight:normal;
+      font-size:1.3em !important;
+  }
+  ul {
+    //margin-top:-16px !important;
+  }
+}
+.mde-preview pre code span {
+  line-height:90% !important;
+}
+.editor-title-input.ui.input input[type=text] {
+  font-size:18pt;
+}
+
+
+.editor-header-layout {
+  display: none !important;
+  margin-top:-5px !important;
+  background-color:#F5F5F4;
+}
