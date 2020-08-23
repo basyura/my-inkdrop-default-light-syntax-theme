@@ -1,10 +1,9 @@
 @import "./colors";
 
 .editor {
-
   .CodeMirror {
     // Background color of main window
-    background-color: #FBFBFB;
+    background-color: #fbfbfb;
     color: @base02;
   }
   .CodeMirror-scroll {
@@ -13,7 +12,7 @@
   }
   .CodeMirror-gutters {
     // Gutter to the left
-    background-color: #FFFFFF;
+    background-color: #ffffff;
   }
   .CodeMirror-linenumber {
     // Line numbers in the gutter
@@ -31,7 +30,7 @@
   .CodeMirror-cursor {
     // The cursor
     border-left: 2px solid @base00;
-    Background:#FFA87D;
+    background: #ffa87d;
     z-index: 999;
   }
   .CodeMirror-matchingbracket,
@@ -62,7 +61,7 @@
     color: @base02;
   }
   .CodeMirror .CodeMirror-linewidget img.inline-widget {
-    background: rgba(0,0,0,0.05);
+    background: rgba(0, 0, 0, 0.05);
   }
   .CodeMirror-searching {
     // Ctrl + F results
@@ -76,18 +75,17 @@
   /* All 'dem swatches */
 
   .CodeMirror {
-
     .cm-searching {
-      color:black;
+      color: black;
       //background-color:orange !important;
-      background-color: #FFD432 !important;
+      background-color: #ffd432 !important;
     }
     .cm-overlay {
     }
     .cm-animate-fat-cursor {
-      color:black;
+      color: black;
       background-color: orange;
-      animation:none;
+      animation: none;
     }
 
     .cm-atom,
@@ -120,11 +118,10 @@
 
     .cm-url {
       //color: blue;
-      font-family:Arial;
-      font-size:11pt;
-      color: #5E81AC;
+      font-family: Arial;
+      font-size: 11pt;
+      color: #5e81ac;
     }
-
 
     .cm-number,
     .cm-attribute,
@@ -145,7 +142,7 @@
     }
     .cm-comment {
       //color: @base04;
-      color:gray;
+      color: gray;
       font-style: italic;
     }
     .cm-error,
@@ -158,16 +155,17 @@
     .cm-header {
       color: @base0A;
     }
-    .cm-formatting-link, .cm-formatting-image {
-      font-family:Menlo !important;
+    .cm-formatting-link,
+    .cm-formatting-image {
+      font-family: Menlo !important;
       //color:rgba(66, 66, 66, 0.3) !important;
     }
     .cm-link {
       //color: @base0E;
-      color: #4078C0;
-      font-family:Arial;
+      color: #4078c0;
+      font-family: Arial;
       text-underline-position: under;
-      text-decoration:none;
+      text-decoration: none;
       padding: 0px 1px 0px 1px;
     }
     .cm-rangeinfo {
@@ -183,11 +181,13 @@
     }
     .quote {
       border-left: 4px solid #ddd;
+      padding-left: 1.2em;
+      text-indent: -1.2em;
     }
     .cm-quote {
       //color: @base0F;
       //color: #81A1C1
-      
+
       color: #777;
       //color: #222;
       //background: #F7F9F9;
@@ -195,15 +195,21 @@
       //font-style: italic;
     }
     .cm-formatting-quote {
-      color: #ddd;
+      //color: #ddd;
+      color: #fbfbfb;
+      //color: #f0f0f0;
     }
     .cm-whitespace::before {
       color: @base04;
       opacity: 0.4;
     }
 
+    .cm-strong {
+      color: #c00000;
+    }
     // carriage return
-    .CodeMirror-code > div > pre > span::after, .CodeMirror-line > span::after {
+    .CodeMirror-code > div > pre > span::after,
+    .CodeMirror-line > span::after {
       color: @base00;
       opacity: 0.4;
     }
@@ -211,7 +217,7 @@
     .cm-inline-code {
       //background: rgba(0, 0, 0, 0.02);
       //color: @base03;
-      Background: #f9f2f4;
+      background: #f9f2f4;
       color: #c7254e;
     }
 
@@ -224,7 +230,8 @@
       //line-height: 130%;
     }
 
-    .cm-table-sep, .table-row.table-row-1 {
+    .cm-table-sep,
+    .table-row.table-row-1 {
       color: @base0E;
     }
   }
@@ -241,45 +248,41 @@
   }
 
   .cm-formatting-strong {
-    color:#f0f0f0 !important;
-    font-size:10px;
+    color: #f0f0f0 !important;
+    font-size: 10px;
   }
-  .cm-strong {
-    color:#C00000;
-  }
-
 
   //.CodeMirror-cursors {
-    //color:orange !important;
-    //background-color:orange !important;
+  //color:orange !important;
+  //background-color:orange !important;
   //}
 
   pre.header.header-2.CodeMirror-line {
-    border-bottom: 1px dashed #D0DAE6;
-    max-width:80%
+    border-bottom: 1px dashed #d0dae6;
+    max-width: 80%;
   }
 
   //span.cm-formatting-header-2 {
-    //display:none;
+  //display:none;
   //}
   .CodeMirror .CodeMirror-placeholder {
     display: none;
   }
 
   //span.cm-formatting-list-ul{
-    //font-size:0px;
+  //font-size:0px;
   //}
   //span.cm-formatting-list-ul:before{
-    //font-size:12px;
-    //content: '・';
+  //font-size:12px;
+  //content: '・';
   //}
 
   //span.cm-formatting-list-ul {
-    //font-size:0px;
+  //font-size:0px;
   //}
   //span.cm-formatting-list-ul:before {
-    //font-size: 10px;
-    //content: "/";
+  //font-size: 10px;
+  //content: "/";
   //}
   img.inline-widget {
     max-height: 300px;
@@ -289,7 +292,7 @@
     text-indent: -1.05em !important;
   }
   .list-line-2 {
-    padding-left: 3.0em !important;
+    padding-left: 3em !important;
     //text-indent: -2.05em !important;
     text-indent: -2.4em !important;
   }
@@ -298,7 +301,9 @@
     text-indent: -3.05em !important;
   }
 
-  .cm-formatting-code-block, .gfm-codeblock-begin, .gfm-codeblock-end  {
+  .cm-formatting-code-block,
+  .gfm-codeblock-begin,
+  .gfm-codeblock-end {
     //text-align:right;
     //color: #DFDFDF;
     color: @base0A;
@@ -318,16 +323,16 @@
 
 // 件数表示
 .accessory-count {
-  display:none;
+  display: none;
 }
 
 .mde-preview * {
-  line-height:180%;
+  line-height: 180%;
 
   h2 {
     color: @base0A;
-    border-bottom: 1px dashed #D0DAE6 !important;
-    max-width:80%;
+    border-bottom: 1px dashed #d0dae6 !important;
+    max-width: 80%;
     font-weight: 500 !important;
   }
   h3 {
@@ -337,19 +342,19 @@
   }
 
   strong {
-    color:#C00000;
+    color: #c00000;
   }
 
   code {
   }
 }
 
-.editor-title-input.ui.input input[type=text] {
-  height:2em;
-  font-size:18pt;
+.editor-title-input.ui.input input[type="text"] {
+  height: 2em;
+  font-size: 18pt;
   //color: rgba(0, 0, 0, 0.84);
-  color:#5181AC;
-  font-weight:bold;
+  color: #5181ac;
+  font-weight: bold;
   //background-color: #FBFBFB;
   //font-family: -apple-system,BlinkMacSystemFont;
 }
@@ -358,7 +363,8 @@
   display: none !important;
 }
 
-.editor-meta-layout, .editor-meta-layout * {
+.editor-meta-layout,
+.editor-meta-layout * {
   //background-color: #FBFBFB !important;
 }
 
@@ -366,3 +372,6 @@
   height: 200px !important;
 }
 
+.dropdown div.selected.item {
+  background: rgba(197, 234, 251, 0.5) !important;
+}
