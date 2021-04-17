@@ -313,7 +313,8 @@
 }
 
 .status-additional {
-  color: rgba(255, 255, 255, 0.8) !important;
+  // color: rgba(255, 255, 255, 0.8) !important;
+  display: none;
 }
 
 .sidebar-menu-item.active {
@@ -326,8 +327,11 @@
   display: none;
 }
 
-.mde-preview * {
-  line-height: 180%;
+.mde-preview {
+  background-color: #fbfbfb;
+  * {
+    line-height: 180%;
+  }
 
   h2 {
     color: @base0A;
@@ -347,6 +351,10 @@
 
   code {
   }
+}
+
+.mde-preview div > p + ul {
+  margin-top: -15px;
 }
 
 .editor-title-input.ui.input input[type="text"] {
@@ -384,5 +392,20 @@
 }
 
 .mde-preview img {
-  max-width: 50% !important;
+  max-width: 70% !important;
+}
+
+// input text box in modal window.
+div.modal-layout div.dropdown input.input {
+  font-family: Menlo;
+}
+
+.sidebar-layout {
+  width: 150px !important;
+  min-width: 150px !important;
+}
+
+/* ステータス変更メニューのキー非表示 */
+div.menu .item .keymap {
+  display: none;
 }
