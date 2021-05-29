@@ -5,9 +5,9 @@
     // Background color of main window
     background-color: #fbfbfb;
     color: @base02;
-    //-webkit-font-smoothing: subpixel-antialiased !important;
     //text-shadow: 0px 0px 0px !important;
     //
+    // -webkit-font-smoothing: subpixel-antialiased !important;
     -webkit-font-smoothing: antialiased;
     -webkit-text-stroke-width: 0.03px !important;
     text-shadow: transparent 0px 0px 0px, rgba(0, 0, 0, 0.26) 0px 0px 0px !important;
@@ -124,9 +124,17 @@
       //color: @base0C;
       color: brown;
     }
+
+    .cm-meta {
+      background: #f9f2f4;
+      color: #c7254e !important;
+      font-weight: bold;
+    }
+
     .cm-property {
-      //color: @base0C;
-      color: darkmagenta;
+      // color: @base0C;
+      color: #5e81ac;
+      // color: darkmagenta;
     }
 
     .cm-variable {
@@ -152,13 +160,33 @@
     .cm-header {
       color: @base0A;
     }
-    .cm-link {
+    .cm-link,
+    .cm-link.cm-variable-2 {
       //color: @base0E;
       color: #4078c0;
+      // color: @base02;
       //font-family: Arial;
       text-underline-position: under;
       text-decoration: none;
       padding: 0px 1px 0px 1px;
+    }
+    .cm-formatting-link {
+      // color: #4078c0 !important;
+      // color: rgba(64, 120, 192, 0.2) !important;
+      color: #fbfbfb !important;
+      font-size: 4pt;
+      // visibility: hidden;
+    }
+    .cm-formatting-link-string {
+      // color: #4078c0 !important;
+      color: rgba(64, 120, 192, 1) !important;
+      font-size: 6pt;
+    }
+    .short-link-mark {
+      //color: #4078c0
+      font-size: 8pt;
+      color: rgba(64, 120, 192, 1) !important;
+      // color: rgba(64, 120, 192, 0.6);
     }
     .cm-rangeinfo {
       color: @base0C;
@@ -173,6 +201,9 @@
       padding-left: 1.2em;
       text-indent: -1.2em;
     }
+    .cm-formatting-quote-2 {
+      border-left: 4px solid #ddd;
+    }
     .cm-quote {
       color: #777;
       //color: @base0F;
@@ -184,6 +215,7 @@
       color: #fbfbfb;
       //color: #f0f0f0;
     }
+
     .cm-whitespace::before {
       color: @base04;
       opacity: 0.4;
@@ -249,6 +281,11 @@
   //color:orange !important;
   //background-color:orange !important;
   //}
+  //
+  pre.header.header-1 {
+    background-color: rgba(236, 239, 244, 0.4);
+    border-bottom: none !important;
+  }
 
   pre.header.header-2.CodeMirror-line {
     border-bottom: 1px dashed #d0dae6;
@@ -293,6 +330,10 @@
     padding-left: 3.4em !important;
     text-indent: -3.05em !important;
   }
+  .list-line-4 {
+    padding-left: 4.6em !important;
+    text-indent: -4.05em !important;
+  }
 }
 
 .sidetoc-pane li {
@@ -305,8 +346,19 @@
 .mde-preview {
   -webkit-font-smoothing: antialiased;
   -webkit-text-stroke-width: 0.03px !important;
+  background-color: #fbfbfb;
   text-shadow: transparent 0px 0px 0px, rgba(0, 0, 0, 0.26) 0px 0px 0px !important;
   font-family: "メイリオ, UD Digi Kyokasho N-R" !important;
+
+  table {
+    th {
+      background-color: #ebf1fb;
+    }
+  }
+}
+
+.mde-preview div > p + ul {
+  margin-top: -15px;
 }
 
 .note-list-bar-item,
@@ -318,7 +370,11 @@ sidebar-menu-item {
 }
 
 .status-additional {
-  color: white !important;
+  // color: white !important;
+  display: none;
+}
+.status-message {
+  color: gray;
 }
 //.status-additional {
 //color: rgba(255, 255, 255, 0.8) !important;
@@ -331,7 +387,7 @@ sidebar-menu-item {
 
 .mde-preview {
   * {
-    line-height: 200%;
+    line-height: 180%;
     font-family: "UD Digi Kyokasho N-R";
     color: black;
   }
@@ -340,6 +396,12 @@ sidebar-menu-item {
   }
   strong {
     color: #c00000;
+  }
+
+  h1 {
+    background-color: rgba(236, 239, 244, 0.4);
+    border-bottom: none !important;
+    padding-left: 5px;
   }
   h2 {
     color: @base0A;
@@ -354,7 +416,7 @@ sidebar-menu-item {
     font-size: 1.3em !important;
   }
   ul {
-    //margin-top:-16px !important;
+    // margin-top: -16px !important;
   }
 }
 .mde-preview pre code span {
@@ -386,7 +448,25 @@ sidebar-menu-item {
   background: rgba(197, 234, 251, 0.5) !important;
 }
 
-.short-link-mark {
-  //color: #4078c0
-  color: rgba(64, 120, 192, 0.6);
+.accessory-count {
+  display: none;
+}
+
+/* サイドバーの幅 */
+.sidebar-layout {
+  width: 150px !important;
+  min-width: 150px !important;
+}
+
+.editor-floating-actions {
+  display: none !important;
+}
+
+/* ステータス変更メニューのキー非表示 */
+div.menu .item .keymap {
+  display: none;
+}
+
+.sidebar-workspace-title .back-button.ui.button {
+  color: black !important;
 }
