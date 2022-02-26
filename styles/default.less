@@ -291,7 +291,7 @@
 
   pre.header.header-2.CodeMirror-line {
     border-bottom: 1px dashed #d0dae6;
-    max-width: 80%;
+    max-width: 90%;
   }
 
   //span.cm-formatting-header-2 {
@@ -379,13 +379,24 @@
   h2 {
     color: @base0A;
     border-bottom: 1px dashed #d0dae6 !important;
-    max-width: 80%;
+    max-width: 90%;
     font-weight: 500 !important;
   }
+  h2::before {
+    content: "## ";
+    color: #5e81ac;
+    opacity: 0.3;
+  }
+
   h3 {
     color: @base0A;
     font-weight: 500 !important;
     font-size: 1.3em !important;
+  }
+  h3::before {
+    content: "### ";
+    color: #5e81ac;
+    opacity: 0.3;
   }
 
   strong {
