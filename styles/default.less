@@ -27,12 +27,16 @@
     // Highlighed text
     background-color: @base04;
   }
+
   .CodeMirror-cursor {
-    // The cursor
     border-left: 2px solid @base00;
-    background: #ffa87d;
-    z-index: 999;
+    visibility: visible;
   }
+  .cm-fat-cursor .CodeMirror-cursor {
+    background: #ffa87d;
+    visibility: visible;
+  }
+
   .CodeMirror-matchingbracket,
   .CodeMirror-matchingtag {
     // When you click a tag/bracket and the matching one is highlighted
@@ -82,11 +86,11 @@
     }
     .cm-overlay {
     }
-    .cm-animate-fat-cursor {
-      color: black;
-      background-color: orange;
-      animation: none;
-    }
+    // .cm-animate-fat-cursor {
+    //   color: black;
+    //   background-color: orange;
+    //   animation: none;
+    // }
 
     .cm-atom,
     .cm-formatting-list.cm-variable-3 {
